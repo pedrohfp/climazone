@@ -37,23 +37,3 @@ jobs:
 
       - name: Run Unit Tests
         run: ./gradlew testDebugUnitTest
-
-  merge:
-
-    runs-on: ubuntu-latest
-
-    if: github.event_name == 'pull_request_target' && github.event.action == 'opened'
-
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          ref: ${{ github.event.pull_request.head.sha }}
-
-      - name: Merge PR
-        uses: peter-evans/create-pull-request@v3
-        with:
-          title: Merge pull request ${GITHUB_REF##*/} from ${GITHUB_REPOSITORY##*/}
-          commit-message: "Automatically merged pull request ${GITHUB_REF##*/}"
-          delete-branch: true
-          branch: main
-          token: ${{ secrets.GITHUB_TOKEN }}
