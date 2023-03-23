@@ -38,7 +38,7 @@ jobs:
       - name: Run Unit Tests
         run: ./gradlew testDebugUnitTest
 
-      - name: Start Emulator
+      - name: Start emulator
         uses: reactivecircus/android-emulator-runner@v2
         with:
           api-level: 30
@@ -47,7 +47,11 @@ jobs:
           package: "system-images;android-30;google_apis;x86_64"
           tag: google_apis
           abi: x86_64
-          run: emulator -avd emulator-30 -no-window -no-audio -no-boot-anim -no-accel -gpu swiftshader_indirect
+          script: |
+            #!/usr/bin/env bash
+            sdkmanager --install 'platform-tools' 'platforms;android-30' 'emulator' 'system-images;android-30;google_apis;x86_64'
+            echo no | avdmanager create avd -n test -k 'system-images;android-30;google_apis;x86_64' --force
+            emulator -avd test -no-window -no-audio -no-boot-anim -no-accel
 
       - name: Wait for emulator to be ready
         run: adb wait-for-device shell 'while [[ -z $(getprop sys.boot_completed) ]]; do sleep 1; done;'
