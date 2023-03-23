@@ -32,7 +32,7 @@ jobs:
         run: ./gradlew detekt
 
       - name: Run Ktlint
-        with: ./gradlew ktlintCheck
+        run: ./gradlew ktlintCheck
 
       - name: Run unit tests
         run: ./gradlew testDebugUnitTest
