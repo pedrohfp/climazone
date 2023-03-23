@@ -1,0 +1,21 @@
+autoCorrect: true
+buildUponDefaultConfig: true
+reports:
+  xml:
+    enabled: true
+    destination: "$buildDir/reports/detekt.xml"
+  html:
+    enabled: true
+    destination: "$buildDir/reports/detekt.html"
+  txt:
+    enabled: false
+  sarif:
+    enabled: false
+
+# Enable ktlint ruleset in detekt
+ktlint:
+  enabled: true
+  filter: ".*\\.kt"
+  ruleSets: "standard"
+  userData:
+    indent_size: 4 # Optional: customize ktlint rules
