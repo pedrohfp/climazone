@@ -28,8 +28,14 @@ jobs:
       - name: Grant execute permission for Gradle
         run: chmod +x ./gradlew
 
+      - name: Run Detekt
+        run: ./gradlew detekt
+
+      - name: Run Ktlint
+        with: ./gradlew ktlintCheck
+
       - name: Run unit tests
-        run: ./gradlew test
+        run: ./gradlew testDebugUnitTest
 
       - name: Start emulator
         uses: reactivecircus/android-emulator-runner@v2
@@ -46,20 +52,6 @@ jobs:
 
       - name: Run instrumented tests
         run: ./gradlew connectedAndroidTest
-
-      - name: Run Detekt
-        uses: detekt/setup-dkt@v1
-        with:
-          version: '1.18.0'
-          script: |
-            ./gradlew detekt
-
-      - name: Run Ktlint
-        uses: detekt/setup-dkt@v1
-        with:
-          version: '1.18.0'
-          script: |
-            ./gradlew ktlintCheck
 
   merge:
 
