@@ -3,8 +3,7 @@ name: Android Pipeline
 on:
   pull_request:
     branches:
-      - 'main'
-
+      - 'master'
 jobs:
   build:
 
@@ -52,10 +51,32 @@ jobs:
         uses: detekt/setup-dkt@v1
         with:
           version: '1.18.0'
-        run: ./gradlew detekt
+          script: |
+            ./gradlew detekt
 
       - name: Run Ktlint
         uses: detekt/setup-dkt@v1
         with:
           version: '1.18.0'
-        run: ./gradlew ktlintCheck
+          script: |
+            ./gradlew ktlintCheck
+
+  merge:
+
+    runs-on: ubuntu-latest
+
+    if: github.event_name == 'pull_request_target' && github.event.action == 'opened'
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Merge PR
+        uses: peter-evans/create-pull-request@v3
+        with:
+          title: Merge pull request ${GITHUB_REF##*/} from ${GITHUB_REPOSITORY##*/}
+          commit-message: "Automatically merged pull request ${GITHUB_REF##*/}"
+          delete-branch: true
+          branch: main
+          token: ${{ secrets.GITHUB_TOKEN }}
