@@ -39,7 +39,7 @@ jobs:
         run: ./gradlew testDebugUnitTest
 
       - name: Install Danger
-        run: gem install danger
+        run: gem install danger --user-install
 
       - name: Run Danger
         env:
