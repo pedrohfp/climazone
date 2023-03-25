@@ -37,3 +37,11 @@ jobs:
 
       - name: Run Unit Tests
         run: ./gradlew testDebugUnitTest
+
+      - name: Install Danger
+        run: gem install danger
+
+      - name: Run Danger
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: danger
