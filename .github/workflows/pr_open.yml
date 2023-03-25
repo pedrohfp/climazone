@@ -44,7 +44,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Set up Ruby 2.6.3
-        uses: ruby/setup-ruby@v1.2.1
+        uses: ruby/setup-ruby@v1
         with:
           ruby-version: '2.6'
       - uses: actions/cache@v1
