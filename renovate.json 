@@ -1,0 +1,7 @@
+{
+  "extends": [
+    "config:base"
+  ],
+  "platform": "github",
+  "githubToken": "${{ secrets.REN_TOKEN }}"
+}
