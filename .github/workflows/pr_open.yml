@@ -37,11 +37,3 @@ jobs:
 
       - name: Run Unit Tests
         run: ./gradlew testDebugUnitTest
-
-      - name: Setup Danger
-        uses: danger/setup-danger-js@v2
-
-      - name: Run Danger
-        uses: danger/github-action@v1
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
