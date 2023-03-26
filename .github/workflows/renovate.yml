@@ -9,8 +9,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Renovate
-        uses: renovatebot/renovate@30.19.0
+        uses: renovatebot/renovate@v28
         with:
           platform: github
-          githubToken: ${{ secrets.REN_TOKEN }}
+          githubToken: ${{ secrets.DANGER_TOKEN }}
           config: renovate.json
