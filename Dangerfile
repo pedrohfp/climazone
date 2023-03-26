@@ -14,7 +14,7 @@ end
 
 # Ktlint
 checkstyle_format.base_path = Dir.pwd
-Dir["**/reports/ktlint/ktlintMainSourceSetCheck/**.xml"].each do |file_name|
+Dir["**/reports/ktlint/ktlintMainSourceSetCheck/**.txt"].each do |file_name|
   checkstyle_format.report(file_name, inline_mode = true)
 end
 
