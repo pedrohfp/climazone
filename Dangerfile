@@ -1,8 +1,16 @@
 # Ignore bot reviews
 declared_trivial = (github.pr_title + github.pr_body).include?("#trivial")
 
-# Tests
-Dir["**/test-results/testDebugUnitTest/*.xml"].each do |file_name|
+#Detekt
+kotlin_detekt.severity = "warning"
+kotlin_detekt.skip_gradle_task = true
+kotlin_detekt.gradle_task = "detektAll"
+kotlin_detekt.report_file = "build/reports/detekt/detekt.xml"
+kotlin_detekt.detekt(inline_mode: true)
+
+#Tests
+junit_tests_dir = "**/test-results/**/*.xml"
+Dir[junit_tests_dir].each do |file_name|
   junit.parse file_name
   junit.report
 end
