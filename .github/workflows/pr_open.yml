@@ -30,7 +30,7 @@ jobs:
         run: chmod +x ./gradlew
 
       - name: Run Detekt
-        run: ./gradlew detekt
+        run: ./tools/linters/detekt/detekt.sh
 
       - name: Run Ktlint
         run: ./gradlew ktlintCheck

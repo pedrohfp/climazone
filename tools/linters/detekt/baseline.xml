@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <CurrentIssues>
+    <ID>ComplexMethod:ComponentViewHolder.kt$ComponentViewHolder.Companion$fun create( parent: ViewGroup, viewType: Int, listener: ComponentAdapter.ComponentAdapterListener ): ComponentViewHolder</ID>
+    <ID>EmptyDefaultConstructor:PricingCardFullDecoration.kt$PricingCardFullDecoration$()</ID>
+    <ID>EmptyDefaultConstructor:RetryCallAdapterFactory.kt$RetryCallAdapterFactory$()</ID>
+    <ID>EmptyFunctionBlock:SendViewModel.kt$SendViewModel.&lt;no name provided&gt;${ }</ID>
+    <ID>EmptyKtFile:settings.gradle.kts$.settings.gradle.kts</ID>
+    <ID>LongParameterList:AddressDatabaseDTO.kt$AddressDatabaseDTO$( @PrimaryKey @ColumnInfo(name = "id") val id: String, @ColumnInfo(name = "addressType") val addressType: String, @ColumnInfo(name = "street") val street: String, @ColumnInfo(name = "number") val number: String, @ColumnInfo(name = "complement") val complement: String, @ColumnInfo(name = "neighborhood") val neighborhood: String, @ColumnInfo(name = "city") val city: String, @ColumnInfo(name = "state") val state: String, @ColumnInfo(name = "country") val country: String, @ColumnInfo(name = "postalCode") val postalCode: String, @ColumnInfo(name = "lat") val lat: Double, @ColumnInfo(name = "lng") val lng: Double, @ColumnInfo(name = "is_principal_address") val isPrincipalAddress: Boolean )</ID>
+    <ID>LongParameterList:AddressPersistenceDTO.kt$AddressPersistenceDTO$( val id: String, val addressType: String, val street: String, val number: String, val complement: String, val neighborhood: String, val city: String, val state: String, val country: String, val postalCode: String, val lat: Double, val lng: Double, val isPrincipal: Boolean )</ID>
+    <ID>LongParameterList:AddressRequestDTO.kt$AddressRequestDTO$( val label: String, val street: String, val number: String, val complement: String?, val neighborhood: String, val city: String, val state: String, val country: String, val postalCode: String, val location: LocationDTO? )</ID>
+    <ID>LongParameterList:AddressResponseDTO.kt$AddressResponseDTO$( val id: String, label: String, street: String, number: String, complement: String?, neighborhood: String, city: String, state: String, country: String, postalCode: String, location: LocationDTO? )</ID>
+    <ID>LongParameterList:AlertDialog.kt$AlertDialog.Builder$( val title: String, @DrawableRes val imageTitle: Int? = null, val description: SpannedString? = null, val positiveButton: Button? = null, val negativeButton: Button? = null, val descriptionMovementMethod: MovementMethod? = null, val onDismissListener: DialogInterface.OnDismissListener? = null, )</ID>
+    <ID>LongParameterList:BottomNavigationListener.kt$BottomNavigationListener$( private val analytics: AnalyticsHitter, private val navigationController: NavigationController, private val anonymousNavigation: AnonymousNavigation, private val favoriteNavigator: FavoriteNavigator, private val listsNavigator: ListsNavigator, private val shouldEnableLoggedFunctionsUseCase: ShouldEnableLoggedFunctionsUseCase, )</ID>
+    <ID>LongParameterList:ChangeListItemViewModel.kt$ChangeListItemViewModel$( private val arg: ChangeListItemArg, private val getSimilarProductsInteractor: GetSimilarProductsInteractor, private val updateProductFromListUseCase: UpdateProductFromListUseCase, private val modalModelFactory: ChangeListModalModelFactory, private val stateViewFactory: ChangeListStateViewFactory, private val changeListLiveData: ChangeListLiveData, )</ID>
+    <ID>LongParameterList:DetailModalViewModal.kt$DetailModalViewModal$( val viewState: DetailModalViewState, private val priceItemAndroidArg: PriceItemAndroidArg, private val likeAction: LikeAction, private val addToUserListUseCase: AddToUserListUseCase, private val resources: Resources, private val shareProvider: ShareProvider, )</ID>
+    <ID>LongParameterList:HomeInteract.kt$HomeInteract$( private val categoryUseCase: PriceWithCategoryUseCase, private val fetchAddressUseCase: FetchAddressUseCase, private val hasDefaultAddressUseCase: HasDefaultAddressUseCase, private val fetchPricesUseCase: FetchPricesUseCase, private val updatePrincipalAddressUseCase: UpdatePrincipalAddressUseCase, private val userProfileDTO: UserProfileDTO, private val navigationController: NavigationController, private val addressStateTranslator: AddressStateTranslator, private val isUserLoggedUseCase: ShouldEnableLoggedFunctionsUseCase, )</ID>
+    <ID>LongParameterList:PricingCarouselCardView.kt$PricingCarouselCardView$( private val pricingCarouseCard: PricingCarouselCard, private val viewCardAttrPreparer: ViewCardAttrPreparer, private val pricingCarouselItemDecoration: PricingCarouselItemDecoration, private val pricingCategoryAnalytics: PricingCategoryAnalytics, private val actionDispatcher: ActionDispatcher, private val analyticsScrollListener: AnalyticsScrollListener, )</ID>
+    <ID>LongParameterList:ResumeAddressDataDTO.kt$ResumeAddressDataDTO$( val label: AddressType, val street: String, val number: String, val complement: String, val city: String, val state: String, val neighborhood: String, val zipCode: String )</ID>
+    <ID>MagicNumber:RetryCallback.kt$500</ID>
+    <ID>MagicNumber:RetryCallback.kt$502</ID>
+    <ID>MagicNumber:RetryCallback.kt$503</ID>
+    <ID>MagicNumber:RetryCallback.kt$504</ID>
+    <ID>MaxLineLength:AddressListInteractor.kt$AddressListInteractor$private</ID>
+    <ID>MaxLineLength:PermissionManagerHandler.kt$PermissionManagerHandler$grantResults.isNotEmpty() &amp;&amp; grantResults.first() == PackageManager.PERMISSION_GRANTED -&gt; PermissionResult.Granted</ID>
+    <ID>MaxLineLength:PricingCardFullCardView.kt$PricingCardFullCardView$private</ID>
+    <ID>MaximumLineLength:br.com.hippopotamus.tabarato.cards.core.basic.pricing.full.PricingCardFullCardView.kt:31</ID>
+    <ID>MaximumLineLength:AddressListInteractor.kt:28</ID>
+    <ID>MaximumLineLength:br.com.tabarato.hippopotamus.permissions.android.PermissionManagerHandler.kt:29</ID>
+    <ID>SpreadOperator:MapToBundle.kt$MapToBundle$(*toArray)</ID>
+  </CurrentIssues>
+</SmellBaseline>
