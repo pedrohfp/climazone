@@ -2,8 +2,6 @@
 
 source "https://rubygems.org"
 
-danger.git.base_commit = "origin/main"
-
 git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
 gem 'danger'

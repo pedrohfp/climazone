@@ -1,3 +1,5 @@
+danger.git.base_commit = "origin/main"
+
 # Ignore bot reviews
 declared_trivial = (github.pr_title + github.pr_body).include?("#trivial")
 
