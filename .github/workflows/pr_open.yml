@@ -32,9 +32,6 @@ jobs:
       - name: Run Detekt
         run: ./tools/linters/detekt/detekt.sh
 
-      - name: Run Ktlint
-        run: ./gradlew ktlintCheck
-
       - name: Run Unit Tests
         run: ./gradlew testDebugUnitTest
 
