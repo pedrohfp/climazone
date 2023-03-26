@@ -3,5 +3,5 @@
     "config:base"
   ],
   "platform": "github",
-  "githubToken": "${{ secrets.REN_TOKEN }}"
+  "githubToken": "${{ secrets.DANGER_TOKEN }}"
 }
