@@ -7,13 +7,6 @@ Dir["**/test-results/testDebugUnitTest/*.xml"].each do |file_name|
   junit.report
 end
 
-# Detekt
-kotlin_detekt.severity = "warning"
-kotlin_detekt.skip_gradle_task = true
-kotlin_detekt.gradle_task = "detektAll"
-kotlin_detekt.report_file = "build/reports/detekt/detekt.xml"
-kotlin_detekt.detekt(inline_mode: true)
-
 #Necessary Unit Tests
 diff = (git.added_files + git.modified_files).select { |item| !item.start_with?(".danger") }
 test_changes = diff.include?("**/src/test/**")
