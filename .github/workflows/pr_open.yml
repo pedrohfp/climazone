@@ -18,6 +18,17 @@ jobs:
           java-version: '11'
           distribution: 'adopt'
 
+      - name: Set up Ruby 2.6.3
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '2.6'
+
+      - name: Bundle install
+        run: |
+          gem install bundler
+          bundle config path vendor/bundle
+          bundle install --jobs 4 --retry 3    
+
       - name: Cache Gradle dependencies
         uses: actions/cache@v2
         with:
@@ -25,6 +36,13 @@ jobs:
             ~/.gradle/caches
             ~/.gradle/wrapper
           key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle.kts') }}
+
+      - uses: actions/cache@v1
+          with:
+            path: vendor/bundle
+            key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+            restore-keys: |
+              ${{ runner.os }}-gems-    
 
       - name: Grant execute permission for Gradle
         run: chmod +x ./gradlew
@@ -35,26 +53,8 @@ jobs:
       - name: Run Detekt
         run: ./tools/linters/detekt/detekt.sh
 
-      - name: Set up Ruby 2.6.3
-        uses: ruby/setup-ruby@v1
-        if: always()
-        with:
-          ruby-version: '2.6'
-
-      - uses: actions/cache@v1
-        with:
-          path: vendor/bundle
-          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-gems-
-
-      - name: Bundle install
-        run: |
-          gem install bundler
-          bundle config path vendor/bundle
-          bundle install --jobs 4 --retry 3
-
       - name: Run danger
+        if: always()
         run: |
           bundle exec danger
         env:
