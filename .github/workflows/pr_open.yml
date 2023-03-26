@@ -49,7 +49,7 @@ jobs:
         uses: codecov/codecov-action@v2
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
-          files: build/reports/kover/report.xml
+          files: build/reports/kover/merged/xml/report.xml
           verbose: true
 
       - name: Run Detekt
