@@ -1,0 +1,35 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'org.jetbrains.kotlinx.kover'
+}
+
+apply from: "$rootDir/tools/android_settings.gradle"
+
+android {
+    defaultConfig {
+        buildConfigField "String", "baseUrl", String.valueOf(System.getenv("API_BASE_URL"))
+        buildConfigField "String", "apiKey", String.valueOf(System.getenv("API_KEY"))
+    }
+}
+
+dependencies {
+    implementation libs.coreKtx
+    implementation libs.appcompat
+    implementation libs.material
+    implementation libs.coroutinesCore
+    implementation libs.coroutinesAndroid
+    implementation libs.koin
+    implementation libs.okhttp
+    implementation libs.logging
+    implementation libs.retrofit
+    implementation libs.retrofitCoroutines
+    implementation libs.retrofitMoshi
+    implementation libs.moshiKotlin
+
+
+    testImplementation libs.junit
+    testImplementation libs.mockk
+    androidTestImplementation libs.extJunit
+    androidTestImplementation libs.espresso
+}

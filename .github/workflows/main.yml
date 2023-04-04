@@ -42,6 +42,12 @@ jobs:
       - name: Grant execute permission for Gradle
         run: chmod +x ./gradlew
 
+      - name: Set API Base Url environment variable
+        run: export API_BASE_URL=${{ secrets.API_BASE_URL }}
+
+      - name: Set API Key environment variable
+        run: export API_KEY=${{ secrets.API_KEY }}
+
       - name: Run Unit Tests
         run: ./gradlew koverMergedReport
 
