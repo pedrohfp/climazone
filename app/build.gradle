@@ -37,6 +37,7 @@ dependencies {
     implementation libs.coreKtx
     implementation libs.appcompat
     implementation libs.material
+    implementation libs.koin
     testImplementation libs.junit
     androidTestImplementation libs.extJunit
     androidTestImplementation libs.espresso
