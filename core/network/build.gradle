@@ -26,6 +26,7 @@ dependencies {
     implementation libs.retrofitCoroutines
     implementation libs.retrofitMoshi
     implementation libs.moshiKotlin
+    implementation libs.playServicesLocation
 
 
     testImplementation libs.junit
