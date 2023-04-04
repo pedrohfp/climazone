@@ -5,6 +5,10 @@ on:
     branches:
       - 'main'
 
+env:
+  API_BASE_URL: "API_BASE_URL"
+  API_KEY: "API_KEY"
+
 jobs:
   quality_pipeline:
     runs-on: ubuntu-latest

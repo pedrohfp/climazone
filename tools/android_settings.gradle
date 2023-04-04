@@ -3,7 +3,6 @@ android {
     compileSdk 33
 
     defaultConfig {
-        applicationId "br.com.climazone"
         minSdk 21
         targetSdk 33
         versionCode 1
