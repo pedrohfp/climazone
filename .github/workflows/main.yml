@@ -43,7 +43,7 @@ jobs:
         run: chmod +x ./gradlew
 
       - name: Set API key environment variable
-        run: export API_KEY=${{ secrets.API_BASE_URL }}
+        run: export API_BASE_URL=${{ secrets.API_BASE_URL }}
 
       - name: Set API key environment variable
         run: export API_KEY=${{ secrets.API_KEY }}
