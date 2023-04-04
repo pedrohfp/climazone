@@ -1,0 +1,16 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'org.jetbrains.kotlinx.kover'
+}
+
+apply from: "$rootDir/tools/android_settings.gradle"
+
+dependencies {
+    implementation libs.coreKtx
+    implementation libs.appcompat
+    implementation libs.material
+    testImplementation libs.junit
+    androidTestImplementation libs.extJunit
+    androidTestImplementation libs.espresso
+}
