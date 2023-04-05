@@ -1,5 +1,7 @@
 package br.com.climazone.di
 
-import org.koin.core.module.Module
+import br.com.climazone.core.network.di.networkModule
 
-val addModules = listOf<Module>()
+val addModules = listOf(
+    networkModule
+)

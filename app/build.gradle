@@ -35,6 +35,8 @@ android {
 
 dependencies {
     implementation project(':core:network')
+    implementation project(':domain:today')
+
     implementation libs.coreKtx
     implementation libs.appcompat
     implementation libs.material
