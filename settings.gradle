@@ -15,4 +15,3 @@ dependencyResolutionManagement {
 rootProject.name = "ClimaZone"
 include ':app'
 include ':core:network'
-include ':domain:today'

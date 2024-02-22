@@ -25,9 +25,9 @@
     <ID>MaxLineLength:AddressListInteractor.kt$AddressListInteractor$private</ID>
     <ID>MaxLineLength:PermissionManagerHandler.kt$PermissionManagerHandler$grantResults.isNotEmpty() &amp;&amp; grantResults.first() == PackageManager.PERMISSION_GRANTED -&gt; PermissionResult.Granted</ID>
     <ID>MaxLineLength:PricingCardFullCardView.kt$PricingCardFullCardView$private</ID>
-    <ID>MaximumLineLength:br.com.hippopotamus.tabarato.cards.core.basic.pricing.full.PricingCardFullCardView.kt:31</ID>
+    <ID>MaximumLineLength:com.accenture.hippopotamus.tabarato.cards.core.basic.pricing.full.PricingCardFullCardView.kt:31</ID>
     <ID>MaximumLineLength:AddressListInteractor.kt:28</ID>
-    <ID>MaximumLineLength:br.com.tabarato.hippopotamus.permissions.android.PermissionManagerHandler.kt:29</ID>
+    <ID>MaximumLineLength:com.accenture.tabarato.hippopotamus.permissions.android.PermissionManagerHandler.kt:29</ID>
     <ID>SpreadOperator:MapToBundle.kt$MapToBundle$(*toArray)</ID>
   </CurrentIssues>
 </SmellBaseline>

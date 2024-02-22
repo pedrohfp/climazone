@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace 'br.com.climazone'
+    namespace 'com.accenture.archref'
     compileSdk 33
 
     defaultConfig {
-        applicationId "br.com.climazone"
+        applicationId "com.accenture.archref"
         minSdk 21
         targetSdk 33
         versionCode 1
@@ -35,7 +35,6 @@ android {
 
 dependencies {
     implementation project(':core:network')
-    implementation project(':domain:today')
 
     implementation libs.coreKtx
     implementation libs.appcompat
