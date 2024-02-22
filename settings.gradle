@@ -12,6 +12,7 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "ClimaZone"
+rootProject.name = "ArchRef"
 include ':app'
 include ':core:network'
+include ':features:example'

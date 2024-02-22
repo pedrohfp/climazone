@@ -1,6 +1,5 @@
 package com.accenture.archref.core.network.di
 
-import com.accenture.archref.BuildConfig
 import com.accenture.archref.core.network.ApiKeyInterceptor
 import com.accenture.archref.core.network.LocationInterceptor
 import com.accenture.archref.core.network.LoggingInterceptor
@@ -39,7 +38,7 @@ val networkModule = module {
         Retrofit.Builder()
             .addConverterFactory(MoshiConverterFactory.create(get()))
             .addCallAdapterFactory(CoroutineCallAdapterFactory())
-            .baseUrl(BuildConfig.baseUrl)
+            .baseUrl("")
             .client(get())
             .build()
     }

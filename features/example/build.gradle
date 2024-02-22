@@ -1,31 +1,31 @@
-apply plugin: 'com.android.library'
-apply plugin: 'kotlin-android'
-apply plugin: 'org.jlleitschuh.gradle.ktlint'
-apply plugin: "io.gitlab.arturbosch.detekt"
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'org.jetbrains.kotlinx.kover'
+}
+
 apply from: "$rootDir/tools/android_settings.gradle"
 
 dependencies {
     implementation project(':core:network')
 
-    implementation Deps.CORE_KTX
-    implementation Deps.APPCOMPAT
-    implementation Deps.MATERIAL
+    implementation libs.coreKtx
+    implementation libs.appcompat
+    implementation libs.material
+    implementation libs.coroutinesCore
+    implementation libs.coroutinesAndroid
+    implementation libs.koin
+    implementation libs.okhttp
+    implementation libs.logging
+    implementation libs.retrofit
+    implementation libs.retrofitCoroutines
+    implementation libs.retrofitMoshi
+    implementation libs.moshiKotlin
+    implementation libs.playServicesLocation
 
-    implementation Deps.KOIN
 
-    implementation Deps.COROUTINES_CORE
-    implementation Deps.COROUTINES_ANDROID
-
-    implementation Deps.LIFECYCLE
-    implementation Deps.LIFECYCLE_VIEWMODEL
-
-    implementation Deps.RETROFIT
-    implementation Deps.RETROFIT_GSON
-    implementation Deps.RETROFIT_COROUTINES
-    implementation Deps.OKHTTP_LOGGING_INTERCEPTOR
-
-    testImplementation Deps.JUNIT
-
-    androidTestImplementation Deps.ANDROID_JUNIT
-    androidTestImplementation Deps.ESPRESSO_CORE
+    testImplementation libs.junit
+    testImplementation libs.mockk
+    androidTestImplementation libs.extJunit
+    androidTestImplementation libs.espresso
 }

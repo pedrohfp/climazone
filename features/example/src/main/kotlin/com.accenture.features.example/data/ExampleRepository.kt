@@ -1,4 +1,6 @@
-package com.pagonxt.archref.features.example.data
+package com.accenture.features.example.data
+
+import com.accenture.features.example.data.ExampleApi
 
 internal class ExampleRepository(private val api: ExampleApi) {
 

@@ -35,6 +35,7 @@ android {
 
 dependencies {
     implementation project(':core:network')
+    implementation project(':features:example')
 
     implementation libs.coreKtx
     implementation libs.appcompat

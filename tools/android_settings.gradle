@@ -1,5 +1,4 @@
 android {
-    namespace 'br.com.climazone'
     compileSdk 33
 
     defaultConfig {
@@ -23,5 +22,8 @@ android {
     }
     kotlinOptions {
         jvmTarget = '1.8'
+    }
+    viewBinding {
+        enabled = true
     }
 }

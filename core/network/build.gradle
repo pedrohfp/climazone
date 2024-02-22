@@ -8,8 +8,8 @@ apply from: "$rootDir/tools/android_settings.gradle"
 
 android {
     defaultConfig {
-        buildConfigField "String", "baseUrl", String.valueOf(System.getenv("API_BASE_URL"))
-        buildConfigField "String", "apiKey", String.valueOf(System.getenv("API_KEY"))
+        //buildConfigField "String", "baseUrl", "api"
+        //buildConfigField "String", "apiKey", "api"
     }
 }
 

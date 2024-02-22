@@ -1,16 +1,15 @@
-package com.pagonxt.archref.features.example
+package com.accenture.features.example
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.pagonxt.archref.core.network.observeOnLoading
-import com.pagonxt.archref.core.network.observeOnSuccess
-import com.pagonxt.archref.core.network.observeOnError
-import com.pagonxt.archref.core.network.setLifecycleOwner
-import com.pagonxt.archref.features.example.data.SomethingDTO
-import com.pagonxt.archref.features.example.databinding.ActivityExampleBinding
+import com.accenture.archref.core.network.observeOnError
+import com.accenture.archref.core.network.observeOnLoading
+import com.accenture.archref.core.network.observeOnSuccess
+import com.accenture.archref.core.network.setLifecycleOwner
+import com.accenture.features.example.data.SomethingDTO
+import com.pagonxt.accenture.features.example.databinding.ActivityExampleBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
-
 
 class ExampleActivity : AppCompatActivity() {
 
