@@ -7,7 +7,7 @@ import com.accenture.archref.core.network.observeOnError
 import com.accenture.archref.core.network.observeOnLoading
 import com.accenture.archref.core.network.observeOnSuccess
 import com.accenture.archref.core.network.setLifecycleOwner
-import com.accenture.features.example.data.SomethingDTO
+import com.accenture.features.example.data.TopHeadlineDTO
 import com.pagonxt.accenture.features.example.databinding.ActivityExampleBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -29,7 +29,7 @@ class ExampleActivity : AppCompatActivity() {
 
     private fun setupViews() {
         binding.btnSend.setOnClickListener {
-            viewModel.sendSomething(binding.edtTypeSomething.text.toString())
+            viewModel.sendSomething()
         }
     }
 
@@ -41,8 +41,8 @@ class ExampleActivity : AppCompatActivity() {
             .observeOnError(::onError)
     }
 
-    private fun onSuccess(somethingDTO: SomethingDTO) {
-        Toast.makeText(this, somethingDTO.first, Toast.LENGTH_LONG).show()
+    private fun onSuccess(topHeadlineDTO: TopHeadlineDTO) {
+        Toast.makeText(this, topHeadlineDTO.toString(), Toast.LENGTH_LONG).show()
     }
 
     private fun onLoading() {

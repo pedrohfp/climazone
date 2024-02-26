@@ -1,5 +1,6 @@
 package com.accenture.archref.core.network
 
+import android.util.Log
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -104,10 +105,12 @@ private suspend fun <T> MutableLiveResource<T>.setupValidationState(
             onSuccess.invoke(it)
         }
     } catch (e: HttpException) {
+        Log.e("API error: ", e.stackTraceToString())
         this.error(e.code())
         onError.invoke(e.code(), e.message())
         //Setup crashlytics and logging here
     } catch (e: Exception) {
+        Log.e("API error: ", e.stackTraceToString())
         this.error(0)
         onError.invoke(0, "")
         //Setup crashlytics and logging here

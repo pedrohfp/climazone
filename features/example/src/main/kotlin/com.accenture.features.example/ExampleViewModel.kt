@@ -6,16 +6,16 @@ import com.accenture.archref.core.network.MutableLiveResource
 import com.accenture.archref.core.network.getLiveData
 import com.accenture.archref.core.network.launchResource
 import com.accenture.features.example.data.ExampleRepository
-import com.accenture.features.example.data.SomethingDTO
+import com.accenture.features.example.data.TopHeadlineDTO
 
 internal class ExampleViewModel(private val repository: ExampleRepository): ViewModel() {
 
-    private val _somethingLiveData = MutableLiveResource<SomethingDTO>()
+    private val _somethingLiveData = MutableLiveResource<TopHeadlineDTO>()
     val somethingLiveData by getLiveData(_somethingLiveData)
 
-    fun sendSomething(something: String) {
+    fun sendSomething() {
         viewModelScope.launchResource(_somethingLiveData, {
-            repository.sendSomething(something)
+            repository.loadHeadlines()
         })
     }
 }

@@ -1,7 +1,0 @@
-{
-  "extends": [
-    "config:base"
-  ],
-  "platform": "github",
-  "githubToken": "${{ secrets.DANGER_TOKEN }}"
-}

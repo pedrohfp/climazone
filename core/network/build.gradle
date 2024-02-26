@@ -8,8 +8,8 @@ apply from: "$rootDir/tools/android_settings.gradle"
 
 android {
     defaultConfig {
-        //buildConfigField "String", "baseUrl", "api"
-        //buildConfigField "String", "apiKey", "api"
+        buildConfigField "String", "baseUrl", "\"https://newsapi.org/v2/\""
+        buildConfigField "String", "apiKey", "\"b52b1d1498d44e148f974d75f7bc03ce\""
     }
 }
 

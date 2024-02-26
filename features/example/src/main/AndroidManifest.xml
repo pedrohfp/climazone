@@ -2,9 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.pagonxt.accenture.features.example" >
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application>
         <activity
-            android:name=".ExampleActivity"
+            android:name="com.accenture.features.example.ExampleActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
